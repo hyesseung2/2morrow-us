@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<!--
+	Hyeseung Kim's Visualization Methodology Project
+-->
+<html lang="en">
+	<head>
+		<!-- Title -->
+		<title>2MORROW WITH Baekgomtang</title>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta name="description" content="HyeseungKim Visualization, Ewha2024 Visualization Methodology Class">
+		<meta name="author" content="hyeseungkim">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Favicon (http://www.favicon-generator.org/) -->
+		<link rel="shortcut icon" href="faviconfi.png" type="image/x-icon">
+		<link rel="icon" href="faviconfi.png" type="image/x-icon">
+
+		<!-- Your Google Analytics code goes here -->
+
+		<!-- Google fonts (https://www.google.com/fonts) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> --> <!-- Body font -->
+		<!--<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">--> <!--Secondary/Alter font-->
+		<link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+
+		<!-- Libs and Plugins CSS -->
+		<link rel="stylesheet" href="assets/vendor/normalize/normalize.min.css"> <!-- Normalize CSS (https://necolas.github.io/normalize.css/) -->
+		<link rel="stylesheet" href="assets/vendor/fontawesome/css/fontawesome-all.min.css"> <!-- Font Icons CSS (https://fontawesome.com) Free version! -->
+		<link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css"> <!-- Swiper CSS (https://swiperjs.com/) -->
+		<link rel="stylesheet" href="assets/vendor/lightgallery/css/lightgallery.min.css"> <!-- lightGallery CSS (http://sachinchoolur.github.io/lightGallery) -->
+
+		<!-- Template master CSS -->
+		<link rel="stylesheet" href="assets/css/helper.css">
+		<link id="tt-themecss" rel="stylesheet" href="assets/css/theme.css">
+		<link id="tt-themecss" rel="stylesheet" href="assets/css/custom.css">
+
+		<script>
+			const countDownTimer = function (id, date) {
+				var _vDate = new Date(date);
+				var _second = 1000;
+				var _minute = _second * 60;
+				var _hour = _minute * 60;
+				var _day = _hour * 24;
+				var timer;
+
+				function showRemaining() {
+					var now = new Date();
+					var distDt = _vDate - now;
+
+					if (distDt < 0) {
+						clearInterval(timer);
+						document.getElementById(id).textContent = 'The remaining time has ended. Is everyone safe and well?';
+						return;
+					}
+
+					var days = Math.floor(distDt / _day);
+					var hours = Math.floor((distDt % _day) / _hour);
+					var minutes = Math.floor((distDt % _hour) / _minute);
+					var seconds = Math.floor((distDt % _minute) / _second);
+
+					/*document.getElementById(id).textContent = days + ' days';
+					document.getElementById(id).textContent += hours + ' hours';
+					document.getElementById(id).textContent += minutes + ' minutes';
+					document.getElementById(id).textContent += seconds + ' seconds';*/
+
+					document.getElementById(id).innerHTML = '<div>' + days + '<span> Days</span></div>' +
+     														'<div>' + hours + '<span> Hours</span></div>' +
+     														'<div>' + minutes + '<span> Minutes</span></div>' +
+    														 '<div>' + seconds + '<span> Seconds</span></div>';
+
+				}
+
+				timer = setInterval(showRemaining, 1000);
+			}
+
+			var dateObj = new Date();
+			dateObj.setDate(dateObj.getDate() + 1);
+
+			countDownTimer('title01', '06/19/2026 00:00 AM'); 
+
+			function updateTimer() {
+				past  = Date.parse("2024-06-19 00:00:00");
+				now     = new Date();
+				diff    = now - past;
+
+				years1  = Math.floor( diff / (1000*60*60*24*30*12) );
+				months1 = Math.floor( diff / (1000*60*60*24*30) );
+				days1   = Math.floor( diff / (1000*60*60*24) );
+				hours1  = Math.floor( diff / (1000*60*60) );
+				mins   = Math.floor( diff / (1000*60) );
+				secs   = Math.floor( diff / 1000 );
+
+				y = years1;
+				M = months1 - years1  * 12;
+				d = days1   - months1 * 30;
+				h = hours1  - days1   * 24;
+				m = mins   - hours1  * 60;
+				s = secs   - mins   * 60;
+
+				document.getElementById("timer")
+					.innerHTML =
+					'<div><span>Since: 2024.06.19</span></div><br>'+
+					'<div class="tt-heading-title">' + y + '<span> years</span>/' +
+					  M + '<span> months</span>/' 
+					 + d + '<span> days</span>/' 
+					 + h + '<span> hours</span>/' 
+					 + m + '<span> minutes</span>/' 
+					 + s + '<span> seconds</span></div>' ;
+				}
+				setInterval('updateTimer()', 1000 );
+
+		</script>
+	</head>
+
+	<body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
+		<main id="body-inner">
+			<div id="page-transition">
+				<div class="ptr-overlay"></div>
+				<div class="ptr-preloader">
+					<div class="ptr-prel-content">
+						<img src="assets/img/preloader.png" class="ptr-prel-image tt-logo-light" alt="Logo">
+					</div> 
+				</div> 
+			</div>
+			<div id="magic-cursor">
+				<div id="ball"></div>
+			</div> 
+			<div id="scroll-container"> 
+				<header id="tt-header" class="tt-header-fixed">
+					<div class="tt-header-inner"> 
+						<div class="tt-header-col">
+							<div class="tt-logo"> 
+								<a href="landing-page.html">
+									<img src="assets/img/logo_1.png" class="tt-logo-light magnetic-item" alt="Logo"> 
+									<img src="assets/img/logo_2.png" class="tt-logo-dark magnetic-item" alt="Logo"> 
+								</a>
+							</div>
+						</div>
+						<div class="tt-header-col">
+							<div id="tt-ol-menu-toggle-btn-wrap">
+								<div class="tt-ol-menu-toggle-btn-text-wrap hide-cursor">
+									<div class="tt-ol-menu-toggle-btn-text">
+										<span class="text-menu" data-hover="Open">Menu</span>
+										<span class="text-close">Close</span>
+									</div>
+								</div>
+								<div class="tt-ol-menu-toggle-btn-holder">
+									<a href="#" class="tt-ol-menu-toggle-btn magnetic-item"><span></span></a>
+								</div>
+							</div>
+							<nav class="tt-overlay-menu tt-ol-menu-count">
+								<div class="tt-ol-menu-ghost">2MORROW Baekgomtang</div>
+								<div class="tt-ol-menu-holder">
+									<div class="tt-ol-menu-inner tt-wrap">
+										<div class="tt-ol-menu-content">
+											<ul class="tt-ol-menu-list">
+												<li class="active"><a href="landing-page.html">HOME</a></li>
+												<li class="tt-ol-submenu-wrap">
+													<div class="tt-ol-submenu-trigger">
+														<a href="#">Climate Crisis Scenario</a>
+														<div class="tt-ol-submenu-caret-wrap">
+															<div class="tt-ol-submenu-caret magnetic-item"></div>
+														</div>
+													</div>
+													<div class="tt-ol-submenu">
+														<ul class="tt-ol-submenu-list">
+															<li><a href="bugs.html">Bug</a></li>
+															<li><a href="bugs.html">Food Shortage</a></li>
+															<li><a href="bugs.html">Floods</a></li>
+															<li><a href="bugs.html">Heat Wave</a></li>
+														</ul>
+													</div>
+												</li>
+												<li class="tt-ol-submenu-wrap"><a href="survival_item.html">Survival Items</a></li>
+												<li class="tt-ol-submenu-wrap"><a href="memories.html">Happy Little Moments</a></li>
+											</ul>
+											<ul class="tt-ol-menu-social">
+												<li><h6 class="tt-ol-menu-social-heading">Social Links:</h6></li>
+												<li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+												<li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a></li>
+												<li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</nav> 
+						</div>
+					</div>
+				</header>
+
+				<div id="content-wrap">
+					<div id="page-header" class="ph-full ph-cap-lg ph-ghost-scroll ph-image-cropped ph-content-parallax">
+						<div class="page-header-inner tt-wrap">
+							<div class="ph-caption ph-caption-mt">
+								<h1 class="ph-caption-title tt-page-caption">
+									<div class="ph-appear ph-appear-left">We<br>Only<br>Have<br>Left</div> 
+									<div class="ph-appear"><em class="text-stroke-light"><h1 id="title01"></h1></em></div> 
+								</h1>
+								<div class="ph-caption-title-ghost">
+									<div class="ph-appear">2 YEARS LEFT</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tt-scroll-down">
+							<a href="#page-content" class="tt-sd-inner ph-appear" data-offset="0">
+								<div class="tt-sd-arrow">
+									<div class="tt-sd-arrow-inner"></div>
+								</div>
+								<div class="tt-sd-text">Scroll</div>
+							</a>
+						</div>
+					</div>
+
+					<div id="page-content">
+						<div class="tt-section">
+							<div class="tt-section-inner">
+								<div id="portfolio-grid" class="pgi-hover">
+									<div class="tt-grid ttgr-layout-creative-2 ttgr-gap-4">
+										<div class="tt-grid-items-wrap isotope-items-wrap">
+											<!-- Portfolio Grid Items Translated -->
+											<div class="tt-grid-item isotope-item people">
+												<div class="ttgr-item-inner">
+													<div class="portfolio-grid-item">
+														<a href="memories.html" class="pgi-image-wrap" data-cursor="Cherry Blossom<br>Viewing">
+															<div class="pgi-image-holder">
+																<div class="pgi-image-inner anim-zoomin">
+																	<figure class="pgi-video-wrap ttgr-height">
+																		<video class="pgi-video" loop muted preload="metadata" poster="assets/img/main/spring_beak.png">
+																			<source src="assets/vids/spring_beak.mp4" type="video/mp4">
+																		</video>
+																	</figure>
+																</div>
+															</div>
+														</a>
+
+														<div class="pgi-caption">
+															<div class="pgi-caption-inner">
+																<h2 class="pgi-title">
+																	<a href="memories.html">Spring with Cherry Blossoms</a>
+																</h2>
+																<div class="pgi-categories-wrap">
+																	<div class="pgi-category">A day in spring spent with Baekgomtang</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="tt-grid-item isotope-item creative">
+												<div class="ttgr-item-inner">
+													<div class="portfolio-grid-item">
+														<a href="memories.html" class="pgi-image-wrap" data-cursor="Summer<br>Sea">
+															<div class="pgi-image-holder">
+																<div class="pgi-image-inner anim-zoomin">
+																	<figure class="pgi-video-wrap ttgr-height">
+																		<video class="pgi-video" loop muted preload="metadata" poster="assets/img/main/summer_beak.png">
+																			<source src="assets/vids/summer_beak.mp4" type="video/mp4">
+																		</video>
+																	</figure>
+																</div>
+															</div>
+														</a>
+
+														<div class="pgi-caption">
+															<div class="pgi-caption-inner">
+																<h2 class="pgi-title">
+																	<a href="memories.html">Living by the Sea for a Month</a>
+																</h2>
+																<div class="pgi-categories-wrap">
+																	<div class="pgi-category">Baekgomtang's summer story</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="tt-grid-item isotope-item people">
+												<div class="ttgr-item-inner">
+													<div class="portfolio-grid-item">
+														<a href="memories.html" class="pgi-image-wrap" data-cursor="Winter<br>Party">
+															<div class="pgi-image-holder">
+																<div class="pgi-image-inner anim-zoomin">
+																	<figure class="pgi-video-wrap ttgr-height">
+																		<video class="pgi-video" loop muted preload="metadata" poster="assets/img/main/christmas_beak.png">
+																			<source src="assets/vids/winter_beak.mp4" type="video/mp4">
+																		</video>
+																	</figure>
+																</div>
+															</div>
+														</a>
+
+														<div class="pgi-caption">
+															<div class="pgi-caption-inner">
+																<h2 class="pgi-title">
+																	<a href="memories.html">Christmas is the Best!</a>
+																</h2>
+																<div class="pgi-categories-wrap">
+																	<div class="pgi-category">Baekgomtang's Christmas diary</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="tt-grid-item isotope-item nature">
+												<div class="ttgr-item-inner">
+													<div class="portfolio-grid-item">
+														<a href="memories.html" class="pgi-image-wrap" data-cursor="Autumn<br>Vibes">
+															<div class="pgi-image-holder">
+																<div class="pgi-image-inner anim-zoomin">
+																	<figure class="pgi-video-wrap ttgr-height">
+																		<video class="pgi-video" loop muted preload="metadata" poster="assets/img/main/fall_beak.png">
+																			<source src="assets/vids/fall_beak.mp4" type="video/mp4">
+																		</video>
+																	</figure>
+																</div>
+															</div>
+														</a>
+
+														<div class="pgi-caption">
+															<div class="pgi-caption-inner">
+																<h2 class="pgi-title">
+																	<a href="memories.html">Autumn with High, Blue Skies</a>
+																</h2>
+																<div class="pgi-categories-wrap">
+																	<div class="pgi-category">Falling leaves and golden ginkgo</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="text-center anim-fadeinup">
+									<a href="memories.html" class="tt-scrolling-btn all-works-btn" data-cursor="Little<br>Moments">
+										<div class="scr-btn-inner ph-appear">
+											<div class="scr-btn-icon"><i class="fas fa-arrow-down"></i></div>
+											<div class="scr-btn-spinner">
+												<svg viewBox="0 0 500 500">
+													<defs>
+														<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path>
+													</defs>
+													<text dy="30" class="scr-btn-text">
+														<textPath xlink:href="#textcircle">Four seasons are disappearing</textPath>
+													</text>
+												</svg>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="tt-section padding-top-xlg-100 padding-bottom-xlg-150">
+							<div class="tt-section-inner tt-wrap max-width-1700">
+								<div class="tt-row margin-left-lg-3-p margin-right-lg-3-p">
+									<div class="tt-col-xl-4">
+										<div class="tt-heading tt-heading-xlg anim-fadeinup">
+											<h3 class="tt-heading-subtitle">Withness Me,<br>Our Memories Of Little Moments...</h3>
+											<h3 class="tt-heading-title">Baekgomtang's<br>Survival On Climate Change</h3>
+										</div>
+
+										<div class="max-width-600 margin-bottom-60 anim-fadeinup">
+											<h5>I'll show you how to survive climate change with simple scenarios.</h5>
+										</div>
+									</div> <!-- /.tt-col -->
+
+									<div class="tt-col-xl-1">
+									</div> <!-- /.tt-col -->
+
+									<div class="tt-col-xl-7">
+										<div class="tt-accordion tt-ac-borders">
+											<div class="tt-accordion-item anim-fadeinup">
+												<div class="tt-accordion-heading">
+													<div class="tt-ac-head cursor-alter">
+														<h3 class="tt-ac-head-title">Insect Scenario</h3>
+													</div>
+													<div class="tt-accordion-caret-wrap">
+														<div class="tt-accordion-caret-inner magnetic-item">
+															<div class="tt-accordion-caret"></div>
+														</div>
+													</div>
+												</div>
+												<div class="tt-accordion-content max-width-800">
+													<p>Due to climate change, there has been a significant increase in insects. Diseases like Lyme disease and malaria are on the rise. When moving to insect-heavy areas, be sure to wear long sleeves and pants to minimize skin contact. Use repellents containing DEET, Icaridin, or IR3535 on your skin and clothes. Don't forget to check your pets after walks, as ticks often latch onto them.</p>
+												</div>
+											</div>
+
+											<div class="tt-accordion-item anim-fadeinup">
+												<div class="tt-accordion-heading">
+													<div class="tt-ac-head cursor-alter">
+														<h3 class="tt-ac-head-title">Food Shortage Scenario</h3>
+													</div>
+													<div class="tt-accordion-caret-wrap">
+														<div class="tt-accordion-caret-inner magnetic-item">
+															<div class="tt-accordion-caret"></div>
+														</div>
+													</div>
+												</div>
+												<div class="tt-accordion-content max-width-800">
+													<p>Have you noticed the high price of apples lately? It’s not just fruit. Soil conditions have made farming difficult. Along with insect issues, pest outbreaks are impacting crop production. Stock up on emergency food and water. Prepare a survival bag. Advances in crop resistance, precision agriculture, and improved irrigation systems are part of the solution.</p>
+												</div>
+											</div>
+
+											<div class="tt-accordion-item anim-fadeinup">
+												<div class="tt-accordion-heading">
+													<div class="tt-ac-head cursor-alter">
+														<h3 class="tt-ac-head-title">Flood Scenario</h3>
+													</div>
+													<div class="tt-accordion-caret-wrap">
+														<div class="tt-accordion-caret-inner magnetic-item">
+															<div class="tt-accordion-caret"></div>
+														</div>
+													</div>
+												</div>
+												<div class="tt-accordion-content max-width-800">
+													<p>Due to El Niño, heavy rain in South America caused severe flooding in Brazil. Houston and nearby areas in the U.S. were also flooded. Korea could be next. Prepare Baekgomtang's waterproof backpack to stay afloat. Don’t stay in basements during heavy rain, and if driving, roll down windows before water reaches two-thirds of the tire height to escape safely. If windows don’t open, break them using the headrest.</p>
+												</div>
+											</div>
+
+											<div class="tt-accordion-item anim-fadeinup">
+												<div class="tt-accordion-heading">
+													<div class="tt-ac-head cursor-alter">
+														<h3 class="tt-ac-head-title">Heat Wave Scenario</h3>
+													</div>
+													<div class="tt-accordion-caret-wrap">
+														<div class="tt-accordion-caret-inner magnetic-item">
+															<div class="tt-accordion-caret"></div>
+														</div>
+													</div>
+												</div>
+												<div class="tt-accordion-content max-width-800">
+													<p>Climate change has made summers hotter. Avoid outdoor work and exercise during peak hours (12 PM to 5 PM). Stay cool, hydrate frequently, and use an umbrella for shade.</p>
+												</div>
+											</div>
+										</div>
+									</div> <!-- /.tt-col -->
+								</div> <!-- /.tt-row -->
+							</div> <!-- /.tt-section-inner -->
+						</div> <!-- /.tt-section -->
+
+						<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120 bg-white-accent-3">
+							<div class="tt-section-inner">
+								<div class="tt-scrolling-text" data-scroll-speed="10">
+									<div class="tt-scrolling-text-inner" data-text="We only have 2 years left →">
+										We only have 2 years left →
+									</div>
+								</div>
+								<div class="tt-scrolling-text scr-text-stroke scr-text-reverse" data-scroll-speed="10">
+									<div class="tt-scrolling-text-inner" data-text="What should we do moving forward? →">
+										What should we do moving forward? →
+									</div>
+								</div>
+							</div> <!-- /.tt-section-inner -->
+						</div> <!-- /.tt-section -->
+
+						<div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150">
+							<div class="tt-section-inner tt-wrap">
+								<div class="tt-heading tt-heading-lg tt-heading-center margin-bottom-120 anim-fadeinup">
+									<h2 class="tt-heading-title">How to Make Good Moments Last Longer</h2>
+									<h2 class="tt-heading-title">Simple Things You Can Do About Climate Change</h2>
+								</div>
+
+								<ul class="tt-logo-wall anim-fadeinup cl-col-3">
+									<li class="main-block">
+										<img src="assets/img/main/temperature_white.png" class="lv-client-light" alt="Client">
+										<img src="assets/img/main/temperature.png" class="lv-client-dark" alt="Client">
+										<p>Adjusting the indoor temperature by one degree</p>
+									</li>
+									<li class="main-block">
+										<img src="assets/img/main/wall-clock_white.png" class="lv-client-light" alt="Client">
+										<img src="assets/img/main/wall-clock.png" class="lv-client-dark" alt="Client">
+										<p>Reducing shower time <br>by 1 minute</p>
+									</li>
+									<li class="main-block"> 
+										<img src="assets/img/main/charger_white.png" class="lv-client-light" alt="Client">
+										<img src="assets/img/main/charger_black.png" class="lv-client-dark" alt="Client">
+										<p>Unplug devices <br>not in use</p>
+									</li>
+									<li class="main-block">
+										<img src="assets/img/main/high_white.png" class="lv-client-light" alt="Client">
+										<img src="assets/img/main/high.png" class="lv-client-dark" alt="Client">
+										<p>Choose energy-efficient products</p>
+									</li>
+									<li class="main-block">
+										<img src="assets/img/main/planet-earth_white.png" class="lv-client-light" alt="Client">
+										<img src="assets/img/main/planet-earth.png" class="lv-client-dark" alt="Client">
+										<p>Opt for eco-friendly products if purchasing</p>
+									</li>
+									<li class="main-block">
+										<img src="assets/img/main/seoul-metro-logo_white.png" class="lv-client-light" alt="Client">
+										<img src="assets/img/main/seoul-metro-logo.png" class="lv-client-dark" alt="Client">
+										<p>Use public transportation when possible</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120 bg-white-accent-3">
+							<div class="tt-section-inner">
+								<div class="tt-scrolling-text" data-scroll-speed="10">
+									<div class="tt-scrolling-text-inner" data-text="We can save more time →">
+										We can save more time →
+									</div>
+								</div>
+								<div class="tt-scrolling-text scr-text-stroke scr-text-reverse" data-scroll-speed="10">
+									<div class="tt-scrolling-text-inner" data-text="But if we can't, we need to be prepared for disaster →">
+										But if we can't, we need to be prepared for disaster →
+									</div>
+								</div>
+							</div> <!-- /.tt-section-inner -->
+						</div> <!-- /.tt-section -->
+
+						<div class="tt-section padding-top-xlg-80 padding-bottom-xlg-80">
+						  <div class="tt-section-inner tt-wrap max-width-1600">
+							<div class="tt-heading tt-heading-xlg margin-bottom-7-p anim-fadeinup max-width-1250 margin-auto" style="">
+								<h3 class="tt-heading-subtitle">Stay Prepared for Any Disaster</h3>
+								<h2 class="tt-heading-title">Survival Items <br>Prepare Climate Change</h2> <!-- You can use <br> to break a text line if needed -->
+								<a href="survival_item.html" class="tt-btn tt-btn-link">
+									<div data-hover="Shop for Survival Kit">Shop for Survival Bag</div>
+									<span class="tt-btn-icon"><i class="fas fa-arrow-right"></i></span>
+								</a>
+							</div>
+							<!-- End tt-Heading -->
+							<div class="tt-blog-carousel anim-fadeinup" data-speed="800" data-simulate-touch="true" data-pagination-type="bullets" style="">
+								<!-- Begin swiper container -->
+								<div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress swiper-backface-hidden">
+									<!-- Begin swiper wrapper (required) -->
+									<div class="swiper-wrapper" style="cursor: grab; transform: translate3d(0px, 0px, 0px);" id="swiper-wrapper-107d210b1d78c5e438" aria-live="polite">
+										<!-- Begin swiper slide 
+										======================== -->
+										<div class="swiper-slide swiper-slide-visible swiper-slide-active" role="group" aria-label="1 / 5" style="width: 385px;">
+											<!-- Begin blog carousel item 
+											============================== -->
+											<div class="tt-blog-carousel-item">
+												<a href="survival_item.html" class="tt-bci-image-wrap not-hide-cursor" data-cursor="Survival Bag<br>Click Here">
+													<figure class="tt-bci-image">
+														<img class="swiper-lazy swiper-lazy-loaded" src="assets/img/main/emergency_bag.png" alt="Image">
+													</figure> <!-- /.tt-bci-image -->
+												</a> <!-- /.tt-bci-image-wrap -->
+												<div class="tt-bci-info">
+													<div class="tt-bci-categories">
+														<a href="floods.html">Floods Scenario</a>
+														<!-- <a href="blog-archive.html">Uncategorized</a> -->
+													</div>
+													<h2 class="tt-bci-title"><a href="survival_item.html">Waterproof Backpack</a></h2>
+													<div class="tt-bci-meta"> 
+														<span class="posted-by"> <a href="floods.html" title="Scenario Viewing">Even if you can't swim, it's okay. It will float.</a></span>
+													</div> <!-- /.tt-bci-meta -->
+												</div> <!-- /.tt-bci-inf -->
+											</div>
+											<!-- End blog carousel item -->
+
+										</div>
+										<!-- End swiper slide -->
+										<!-- Begin swiper slide 
+										======================== -->
+										<div class="swiper-slide swiper-slide-visible swiper-slide-next" role="group" aria-label="2 / 5" style="width: 385px;">
+											<!-- Begin blog carousel item 
+											============================== -->
+											<div class="tt-blog-carousel-item">
+												<a href="survival_item.html" class="tt-bci-image-wrap not-hide-cursor" data-cursor="Survival Bag<br>Click Here">
+													<figure class="tt-bci-image">
+														<img class="swiper-lazy swiper-lazy-loaded" src="assets/img/main/emergency_bugs1.png" alt="Image">
+													</figure> <!-- /.tt-bci-image -->
+												</a> <!-- /.tt-bci-image-wrap -->
+
+												<div class="tt-bci-info">
+													<div class="tt-bci-categories">
+														<a href="bugs.html">Bug Scenario</a>
+														<!-- <a href="blog-archive.html">Uncategorized</a> -->
+													</div>
+													<h2 class="tt-bci-title"><a href="survival_item.html">Bug Spray</a></h2>
+													<div class="tt-bci-meta"> 
+														<span class="posted-by"> <a href="bugs.html" title="곤충시나리오 보기">Essential for the increasing ticks and mosquitoes.</a></span>
+													</div> <!-- /.tt-bci-meta -->
+												</div> <!-- /.tt-bci-inf -->
+											</div>
+											<!-- End blog carousel item -->
+
+										</div>
+										<!-- End swiper slide -->
+
+										<!-- Begin swiper slide 
+										======================== -->
+										<div class="swiper-slide swiper-slide-visible" role="group" aria-label="3 / 5" style="width: 385px;">
+
+											<!-- Begin blog carousel item 
+											============================== -->
+											<div class="tt-blog-carousel-item">
+												<a href="survival_item.html" class="tt-bci-image-wrap not-hide-cursor" data-cursor="Survival Bag<br>Click Here">
+													<figure class="tt-bci-image">
+														<img class="swiper-lazy swiper-lazy-loaded" src="assets/img/main/emergency_foods1.png" alt="Image">
+													</figure> <!-- /.tt-bci-image -->
+												</a> <!-- /.tt-bci-image-wrap -->
+
+												<div class="tt-bci-info">
+													<div class="tt-bci-categories">
+														<a href="foods.html">Food Shortage Scenario</a>
+														<!-- <a href="blog-archive.html">Uncategorized</a> -->
+													</div>
+													<h2 class="tt-bci-title"><a href="survival_item.html">Survival Food</a></h2>
+													<div class="tt-bci-meta"> 
+														<span class="posted-by"><a href="foods.html" title="Food Shortage Scenario">If there's nothing to eat, you'll starve immediately.</a></span>
+													</div> <!-- /.tt-bci-meta -->
+												</div> <!-- /.tt-bci-inf -->
+											</div>
+											<!-- End blog carousel item -->
+
+										</div>
+										<!-- End swiper slide -->
+										<!-- Begin swiper slide 
+										======================== -->
+										<div class="swiper-slide" role="group" aria-label="4 / 5" style="width: 385px;">
+											<!-- Begin blog carousel item 
+											============================== -->
+											<div class="tt-blog-carousel-item">
+												<a href="survival_item.html" class="tt-bci-image-wrap not-hide-cursor" data-cursor="Survival Bag<br>Click Here">
+													<figure class="tt-bci-image">
+														<img class="swiper-lazy" src="assets/img/main/emergency_heat1.png" data-src="assets/img/main/emergency_heat1.png" alt="Image">
+													</figure> <!-- /.tt-bci-image -->
+												</a> <!-- /.tt-bci-image-wrap -->
+												<div class="tt-bci-info">
+													<div class="tt-bci-categories">
+														<a href="heatwave.html">Hotwave Scenario</a>
+														<!-- <a href="blog-archive.html">Uncategorized</a> -->
+													</div>
+													<h2 class="tt-bci-title"><a href="survival_item.html">Heatwave Emergency Kit</a></h2>
+													<div class="tt-bci-meta"> 
+														<span class="posted-by"><a href="heatwave.html" title="View all posts by John Doe">This is essential when you’re suffering from heat exhaustion.</a></span>
+													</div> <!-- /.tt-bci-meta -->
+												</div> <!-- /.tt-bci-inf -->
+											</div>
+											<!-- End blog carousel item -->
+										</div>
+										<!-- End swiper slide -->
+										<!-- Begin swiper slide 
+										======================== -->
+										<div class="swiper-slide" role="group" aria-label="5 / 5" style="width: 385px;">
+											<!-- Begin blog carousel item 
+											============================== -->
+											<div class="tt-blog-carousel-item">
+												<a href="survival_item.html" class="tt-bci-image-wrap not-hide-cursor" data-cursor="Survival Bag<br>Click Here">
+													<figure class="tt-bci-image">
+														<img class="swiper-lazy" src="assets/img/main/emergency_water1.png" data-src="assets/img/main/emergency_water1.png" alt="Image">
+													</figure> <!-- /.tt-bci-image -->
+												</a> <!-- /.tt-bci-image-wrap -->
+												<div class="tt-bci-info">
+													<div class="tt-bci-categories">
+														<a href="survival_item.html">ALL</a>
+														<!-- <a href="blog-archive.html">Uncategorized</a> -->
+													</div>
+													<h2 class="tt-bci-title"><a href="survival_item.html">Water Purification Capsule</a></h2>
+													<div class="tt-bci-meta"> 
+														<span class="posted-by"><a href="survival_item.html" title="재난상황에 다 필요한 아이템">Because you need to drink water, no matter the disaster.</a></span>
+													</div> <!-- /.tt-bci-meta -->
+												</div> <!-- /.tt-bci-inf -->
+											</div>
+											<!-- End blog carousel item -->
+										</div>
+										<!-- End swiper slide -->
+									</div>
+									<!-- End swiper wrapper -->
+								<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+								<!-- End swiper container -->
+								<!-- Begin blog carousel navigation (arrows) 
+								============================================= -->
+								<div class="tt-blc-nav-prev tt-blc-nav-arrow-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-107d210b1d78c5e438" aria-disabled="true">
+									<div class="magnetic-wrap"><div class="tt-blc-nav-arrow magnetic-item"><i class="tt-arrow-left"></i></div></div>
+								</div>
+								<div class="tt-blc-nav-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-107d210b1d78c5e438" aria-disabled="false">
+									<div class="magnetic-wrap"><div class="tt-blc-nav-arrow magnetic-item"><i class="tt-arrow-right"></i></div></div>
+								</div>
+								<!-- End blog carousel navigation -->
+
+								<!-- Blog carousel pagination -->
+								<div class="tt-blc-pagination hide-cursor swiper-pagination-clickable tt-blc-pagination-bullets swiper-pagination-horizontal tt-blc-pagination-bullets-dynamic" style="width: 140px;"><span class="swiper-pagination-bullet swiper-pagination-bullet-active swiper-pagination-bullet-active-main" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true" style="left: 28px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next" tabindex="0" role="button" aria-label="Go to slide 2" style="left: 28px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next" tabindex="0" role="button" aria-label="Go to slide 3" style="left: 28px;"></span></div>
+
+							</div>
+							<!-- End blog carousel -->
+
+						</div>
+						</div>
+
+						<div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150">
+							<div class="tt-section-inner tt-wrap max-width-700">
+								<div class="tt-heading tt-heading-xxlg margin-bottom-8-p anim-fadeinup">
+									<h3 class="tt-heading-subtitle">Let's prevent these worst-case scenarios.<br>Join the fight against climate change today.</h3>
+									<h2 class="tt-heading-title">Let's Save the Earth Together!</h2>
+								</div>
+							</div>
+						</div>
+
+						<div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150">
+							<div class="tt-section-inner tt-wrap">
+								<div class="tt-page-nav tt-pn-center">
+									<a href="landing-page.html" class="tt-pn-link anim-fadeinup not-hide-cursor">
+										<div id="timer"></div>
+									</a> <!-- /.tt-pn-link -->
+									<div class="tt-pn-subtitle anim-fadeinup">Time we’ve spent working to save the Earth. Let it continue even after the countdown ends.</div>
+								</div>
+								<!-- End page nav -->
+
+							</div> <!-- /.tt-section-inner -->
+						</div>
+
+					</div>
+					<!-- End page content -->
+
+					<!-- Footer Section -->
+					<footer id="tt-footer">
+						<div class="tt-footer-inner">
+							<div class="footer-col tt-align-center-left">
+								<div class="footer-col-inner">
+									<a href="#" class="tt-btn tt-btn-link scroll-to-top">
+										<span class="tt-btn-icon"><i class="fas fa-arrow-up"></i></span>
+										<div data-hover="Back to Top">Back to Top</div>
+									</a>
+								</div> <!-- /.footer-col-inner -->
+							</div>
+
+							<div class="footer-col tt-align-center order-m-last">
+								<div class="footer-col-inner">
+									<div class="tt-copyright text-gray">
+										<a href="#" target="_blank" rel="noopener" class="tt-btn tt-btn-link">
+											<span class="tt-btn-icon"><i class="far fa-copyright"></i></span>
+											<div data-hover="HyeseungKim">Made by Hyeseung Kim</div>
+										</a>
+									</div>
+								</div> <!-- /.footer-col-inner -->
+							</div>
+
+							<div class="footer-col tt-align-center-right">
+								<div class="footer-col-inner">
+									<div class="footer-social">
+										<div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>
+										<div class="social-buttons">
+											<ul>
+												<li><a href="#" class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+												<li><a href="#" class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
+												<li><a href="#" class="magnetic-item" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+											</ul>
+										</div> <!-- /.social-buttons -->
+									</div> <!-- /.footer-social -->
+								</div> <!-- /.footer-col-inner -->
+							</div>
+						</div> <!-- /.footer-inner -->
+					</footer>
+					<!-- End Footer -->
+
+				</div>
+				<!-- End content wrap -->
+
+			</div>
+			<!-- End scroll container -->
+
+		</main>
+		<!-- End body inner -->
+
+		<!-- Scripts -->
+		<script src="assets/vendor/jquery/jquery.min.js"></script> <!-- jQuery (https://jquery.com) -->
+		<script src="assets/vendor/gsap/gsap.min.js"></script> <!-- GSAP (https://greensock.com/gsap/) -->
+		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> <!-- GSAP ScrollToPlugin (https://greensock.com/scrolltoplugin/) -->
+		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> <!-- GSAP ScrollTrigger (https://greensock.com/scrolltrigger/) -->
+		<script src="assets/vendor/smooth-scrollbar.js"></script> <!-- Smooth Scrollbar (https://github.com/idiotWu/smooth-scrollbar/) -->
+		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> <!-- Swiper (https://swiperjs.com/) -->
+		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> <!-- ImagesLoaded (https://imagesloaded.desandro.com/) -->
+		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> <!-- Isotope (http://isotope.metafizzy.co) -->
+		<script src="assets/vendor/isotope/packery-mode.pkgd.min.js"></script> <!-- Isotope Packery Mode (https://isotope.metafizzy.co/layout-modes/packery.html) -->
+		<script src="assets/vendor/lightgallery/js/lightgallery-all.min.js"></script> <!-- LightGallery (http://sachinchoolur.github.io/lightGallery) -->
+		<script src="assets/vendor/jquery.mousewheel.min.js"></script> <!-- jQuery Mousewheel (https://github.com/jquery/jquery-mousewheel) -->
+		<script src="assets/js/theme.js"></script> <!-- Theme JS -->
+
+	</body>
+
+</html>

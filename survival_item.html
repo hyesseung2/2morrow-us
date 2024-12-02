@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!--
+	Hyeseung Kim's Visualization Project
+-->
+<html lang="en">
+	<head>
+		<!-- Title -->
+		<title>2MORROW WITH Baekgomtang</title>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta name="description" content="HyeseungKim Visualization, Ewha 2024">
+		<meta name="author" content="ewha2024 uxdesign hyeseungkim">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Favicon (http://www.favicon-generator.org/) -->
+		<link rel="shortcut icon" href="faviconfi.png" type="image/x-icon">
+		<link rel="icon" href="faviconfi.png" type="image/x-icon">
+
+		<!-- Your Google Analytics code goes here -->
+
+		<!-- Google fonts (https://www.google.com/fonts) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> --> <!-- Body font -->
+		<!--<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">--> <!--Secondary/Alter font-->
+		<link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+
+		<!-- Libs and Plugins CSS -->
+		<link rel="stylesheet" href="assets/vendor/normalize/normalize.min.css"> <!-- Normalize CSS (https://necolas.github.io/normalize.css/) -->
+		<link rel="stylesheet" href="assets/vendor/fontawesome/css/fontawesome-all.min.css"> <!-- Font Icons CSS (https://fontawesome.com) Free version! -->
+		<link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css"> <!-- Swiper CSS (https://swiperjs.com/) -->
+		<link rel="stylesheet" href="assets/vendor/lightgallery/css/lightgallery.min.css"> <!-- lightGallery CSS (http://sachinchoolur.github.io/lightGallery) -->
+
+		<!-- Template master CSS -->
+		<link rel="stylesheet" href="assets/css/helper.css">
+		<link id="tt-themecss" rel="stylesheet" href="assets/css/theme.css">
+		<link id="tt-themecss" rel="stylesheet" href="assets/css/custom.css">
+
+		<script>
+
+		</script>
+	</head>
+
+	
+	<!-- ===========
+	///// Body /////
+	================
+	-->
+	<body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
+		<!-- *************************************
+		*********** Begin body inner ************* 
+		************************************** -->
+		<main id="body-inner">
+			<!-- Begin page transition (do not remove!!!) 
+			=========================== -->
+			<div id="page-transition">
+				<div class="ptr-overlay"></div>
+				<div class="ptr-preloader">
+					<div class="ptr-prel-content">
+						<!-- Hint: You may need to change the img height and opacity to match your logo type. You can do this from the "theme.css" file (find: ".ptr-prel-image"). -->
+						<img src="assets/img/preloader.png" class="ptr-prel-image tt-logo-light" alt="Logo">
+					</div> <!-- /.ptr-prel-content -->
+				</div> <!-- /.ptr-preloader -->
+			</div>
+			<!-- End page transition -->
+
+			<!-- Begin magic cursor 
+			======================== -->
+			<div id="magic-cursor">
+				<div id="ball"></div>
+			</div>
+			<!-- End magic cursor --> 
+
+
+			<!-- *****************************************
+			*********** Begin scroll container *********** 
+			****************************************** -->
+			<div id="scroll-container"> 
+							<!-- ===================
+				///// Begin header /////
+				========================
+				* Use class "tt-header-fixed" to set header to fixed position.
+				-->
+				<header id="tt-header" class="tt-header-fixed">
+					<div class="tt-header-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes can be found in the file "helper.css". -->
+						<div class="tt-header-col">
+							<!-- Begin logo 
+							================ -->
+							<div class="tt-logo"> 
+								<a href="landing-page.html">
+									<!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
+									<img src="assets/img/logo_1.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
+									<img src="assets/img/logo_2.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
+								</a>
+							</div>
+							<!-- End logo -->
+						</div> <!-- /.tt-header-col -->
+
+						<div class="tt-header-col">
+
+							<!-- Begin overlay menu toggle button -->
+							<div id="tt-ol-menu-toggle-btn-wrap">
+								<div class="tt-ol-menu-toggle-btn-text-wrap hide-cursor">
+									<div class="tt-ol-menu-toggle-btn-text">
+										<span class="text-menu" data-hover="Open">Menu</span>
+										<span class="text-close">Close</span>
+									</div> <!-- /.tt-ol-menu-toggle-btn-text -->
+								</div> <!-- /.tt-ol-menu-toggle-btn-text-wrap -->
+								<div class="tt-ol-menu-toggle-btn-holder">
+									<a href="#" class="tt-ol-menu-toggle-btn magnetic-item"><span></span></a>
+								</div> <!-- /.tt-ol-menu-toggle-btn-holder -->
+							</div>
+							<!-- End overlay menu toggle button -->
+
+							<!-- Begin overlay menu 
+							======================== 
+							* Use class "tt-ol-menu-count" to enable menu counter.
+							-->
+							<nav class="tt-overlay-menu tt-ol-menu-count">
+								<div class="tt-ol-menu-ghost">2MORROW Baekgomtang</div>
+								<div class="tt-ol-menu-holder">
+									<div class="tt-ol-menu-inner tt-wrap">
+										<div class="tt-ol-menu-content">
+
+											<!-- Begin menu list -->
+											<ul class="tt-ol-menu-list">
+
+												<li class="active"><a href="landing-page.html">HOME</a></li>
+
+												<!-- Begin submenu (submenu master)
+												==================================== -->
+												<li class="tt-ol-submenu-wrap">
+													<div class="tt-ol-submenu-trigger">
+														<a href="#">Climate Crisis Scenario</a>
+														<div class="tt-ol-submenu-caret-wrap">
+															<div class="tt-ol-submenu-caret magnetic-item"></div>
+														</div> <!-- /.tt-ol-submenu-caret-wrap -->
+													</div> <!-- /.tt-ol-submenu-trigger -->
+													<div class="tt-ol-submenu">
+														<ul class="tt-ol-submenu-list">
+															<li><a href="bugs.html">Bug</a></li>
+															<li><a href="bugs.html">Food Shortage</a></li>
+															<li><a href="bugs.html">Floods</a></li>
+															<li><a href="bugs.html">Heat Wave</a></li>
+														</ul> <!-- /.tt-ol-submenu-list -->
+													</div> <!-- /.tt-ol-submenu -->
+												</li>
+												<!-- End submenu (sub-master) -->
+												<li class="tt-ol-submenu-wrap"><a href="survival_item.html">Survival Items</a></li>
+												<li class="tt-ol-submenu-wrap"><a href="memories.html">Happy Little Moments</a></li>
+												<!-- End submenu (sub-master) -->
+											</ul>
+											<!-- End menu list -->
+
+											<!-- Begin overlay menu social links 
+											===================================== -->
+											<ul class="tt-ol-menu-social">
+												<li><h6 class="tt-ol-menu-social-heading">Social Links:</h6></li>
+												<li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+												<li><a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a></li>
+												<li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Youtube</a></li>
+											</ul>
+											<!-- End overlay menu social links -->
+
+										</div> <!-- /.tt-ol-menu-content -->
+									</div> <!-- /.tt-ol-menu-inner -->
+								</div> <!-- /.tt-ol-menu-holder -->
+							</nav> 
+							<!-- End overlay menu -->
+						</div> <!-- /.header-col -->
+					</div> <!-- /.header-inner -->
+				</header>
+
+				
+								<!-- *************************************
+				*********** Begin content wrap *********** 
+				************************************** -->
+				<div id="content-wrap">
+					<!-- *************************************
+					*********** Begin page content *********** 
+					************************************** -->
+					<div id="page-content">
+
+
+						<!-- ======================================================
+						///// Begin portfolio carousel (full screen carousel) /////
+						===========================================================
+						* NOTE: The Portfolio carousel is a standalone element. Do not add other elements to this page!!!
+						* Use class "pc-scale-down" to enable scale down animation on click (data-simulate-touch attribute must be enabled).
+						* Use class "cursor-drag-mouse-down" to enable cursor drag style on mouse down (data-simulate-touch attribute must be enabled).
+						* Use class "pci-hover" to enable item hover effect.
+						* Use class "pci-caption-stroke" to enable caption title stroke style.
+						* Available data attributes:
+								data-autoplay="5000"..................(milliseconds. Note: disabled after user first interactions)
+								data-mousewheel="true"................(true/false)
+								data-keyboard="true"..................(true/false)
+								data-simulate-touch="true"............(true/false)
+								data-grab-cursor="true"...............(true/false)
+								data-pagination-type="fraction".......(bullets/fraction/progressbar)
+						-->
+						<div class="tt-portfolio-carousel pci-hover cursor-drag-mouse-down pc-scale-down" data-simulate-touch="true" data-mousewheel="true" data-keyboard="true" data-grab-cursor="true" data-pagination-type="progressbar">
+
+							<!-- Begin swiper container -->
+							<div class="swiper">
+
+								<!-- Begin swiper wrapper (required) -->
+								<div class="swiper-wrapper">
+
+									<!-- Begin swiper slide 
+									======================== -->
+									<div class="swiper-slide">
+
+										<!-- Begin portfolio carousel item 
+										===================================
+										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
+										-->
+										<a href="https://www.amazon.com/Earth-Pak-Waterproof-Backpack-Front-Zippered/dp/B074MGDDC7/ref=sr_1_2_sspa?crid=1ASV6DYCE88D9&dib=eyJ2IjoiMSJ9.X0imfQUKwhoWQOLlYntjsxQwfWnhwxjB4-ApHByPt1qGMJElxVwSVgFTZ6v3J8Cq1sGkIrCMB9V7YeghF6a1IVkFS42g_TWy7gEaHvai7uvCzdeqzTRO_2qFsBoBpof1KTPs-CoT0O_9kso4SX4kyWCcvmPq-Bzs1csweArJSpMsNGKWLIyvnVhtvySkmm8b1zIBwdRYQdLUVnZP0YmjLJyt47zVhuwkvGitVx4Hd2TJKfjL7SNOKp_e5bwqhLCqKKoVttBwrcpHDrnsGaLJHte1jZNo3nHlA9D-XB0cZkQ.nkhPuzGdrd-A0f5Zt9J7KqlSs8xNLUCehWudASGtri4&dib_tag=se&keywords=waterproof%2Bbag%2Bemergency&qid=1733098058&sprefix=waterproof%2Bbag%2Bemergenc%2Caps%2C442&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1" class="tt-portfolio-carousel-item" data-cursor="View<br>Item" target="_blank">
+											<div class="tt-pci-inner">
+
+												<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
+												<figure class="tt-pci-image-wrap cover-opacity-2">
+													<img class="tt-pci-image swiper-lazy" src="assets/img/main/emergency_bag.png" data-src="assets/img/main/emergency_bag.png" alt="Image">
+												</figure> <!-- /.tt-pci-image-wrap -->
+
+												<div class="tt-pci-caption-front">
+													<div class="tt-pci-caption">
+														<div class="tt-pci-caption-inner">
+															<div class="tt-pci-categories">
+																<div class="tt-pci-category">Flood Scenario</div>
+															</div> <!-- /.tt-pci-categories -->
+															<h2 class="tt-pci-title">Waterproof Bag<br class="hide-from-sm"> That Floats</h2>
+														</div> <!-- /.tt-pci-caption-inner -->
+													</div> <!-- /.tt-pci-caption -->
+												</div> <!-- /.tt-pci-caption-front -->
+
+												<div class="tt-pci-caption tt-pci-caption-back">
+													<div class="tt-pci-caption-inner">
+														<div class="tt-pci-categories">
+															<div class="tt-pci-category">Flood Scenario</div>
+														</div> <!-- /.tt-pci-categories -->
+														<h2 class="tt-pci-title">Waterproof Bag<br class="hide-from-sm"> That Floats</h2>
+													</div> <!-- /.tt-pci-caption-inner -->
+												</div> <!-- /.tt-pci-caption -->
+
+											</div> <!-- /.tt-pci-inner -->
+										</a>
+										<!-- End portfolio carousel item -->
+
+									</div> 
+									<!-- End swiper slide -->
+
+									<!-- Begin swiper slide 
+									======================== -->
+									<div class="swiper-slide">
+										<a href="https://www.amazon.com/Bed-Bug-Spray-Travel-Size/dp/B0D8YPQK79/ref=sr_1_3?crid=JTMN0N13JWBF&dib=eyJ2IjoiMSJ9.DWsfAw0QdkfnVlHXAZuMSbufwyp0Ev_8zYZALs-2psRlLWnFHn7-s66GgeuwB8j-G_lgmJJEIriwxROHqBE-wJLYlY7LAIPDx5nF8shAxI8BEFNuuALvz-yVY-ZiTn7fkzMGfdJPnX9-4l8FgvmHB9t92eksRwySxprH3NXJ1xkpkx7-xoWx6FYvoeF-jCm0fBSXEi71V2za77LgxwXufhHF3aNDFH-WiQxB8BD1BQwY2SbCCzBmq3QARK7cxlieHQMyAQpBHPasha-VTHgnjUi2D2piyS0Ah0K315sicQk.4xAzqxvZIbQlKNdrYKNkgZmwTZrULE4gRJVT7Xzl5ac&dib_tag=se&keywords=mosquito+spray+mini&qid=1733098147&sprefix=mosquito+spray+%2Caps%2C344&sr=8-3" class="tt-portfolio-carousel-item" data-cursor="View<br>Item" target="_blank">
+											<div class="tt-pci-inner">
+
+												<figure class="tt-pci-image-wrap cover-opacity-2">
+													<img class="tt-pci-image swiper-lazy" src="assets/img/main/emergency_bugs.png" data-src="assets/img/main/emergency_bugs.png" alt="Image">
+												</figure> <!-- /.tt-pci-image-wrap -->
+
+												<div class="tt-pci-caption-front">
+													<div class="tt-pci-caption">
+														<div class="tt-pci-caption-inner">	
+															<div class="tt-pci-categories">
+																<div class="tt-pci-category">Bug Scenario</div>
+															</div> <!-- /.tt-pci-categories -->
+															<h2 class="tt-pci-title">Mosquitoes and Ticks<br class="hide-from-sm">Stay away!</h2>
+														</div> <!-- /.tt-pci-caption-inner -->
+													</div> <!-- /.tt-pci-caption -->
+												</div> <!-- /.tt-pci-caption-front -->
+
+												<div class="tt-pci-caption tt-pci-caption-back">
+													<div class="tt-pci-caption-inner">
+														<div class="tt-pci-categories">
+															<div class="tt-pci-category">Bug Scenario</div>
+														</div> <!-- /.tt-pci-categories -->
+														<h2 class="tt-pci-title">Mosquitoes and Ticks<br class="hide-from-sm">Stay away!</h2>
+													</div> <!-- /.tt-pci-caption-inner -->
+												</div> <!-- /.tt-pci-caption -->
+
+											</div> <!-- /.tt-pci-inner -->
+										</a>
+										<!-- End portfolio carousel item -->
+
+									</div>
+									<!-- End swiper slide -->
+
+									<!-- Begin swiper slide 
+									======================== -->
+									<div class="swiper-slide">
+										<a href="https://www.amazon.com/Rations-Emergency-3600-Calorie-Food/dp/B01AIZ78DS/ref=sr_1_5?crid=2ETULAV7OKFQT&dib=eyJ2IjoiMSJ9.9Be3HsuCSt8qne7b4qNTWtwV3cElIBGgV0_WQbKkmah6-N_cXEw4qAiJpLSBs14y0gWa2lbavCdQA90dx9mL99lZQAJK6-FSarXaSvUiVvePzDqHCj27C14CS1GzJfP0tS42evLMiWaaszNMBRMilBe-mSC5CMZ-2yGic8ttZGnKiGnHfN_y764bYJQm7cio7O2vZYIKc4wA4XBocF4po2QB5udmaa4EeZHJ_Hs3UyGRzfLyrDeLG7tPuTuASCi74v_VObB7o7HOu5vaWVzSmYrY5pkfeIM3f8Ll7XxtNHs.SbA5bqtxqMaLRoBippvViO9zVtKJ9RTgL9_QZr8lpqo&dib_tag=se&keywords=army+food&qid=1733098234&sprefix=army+food%2Caps%2C338&sr=8-5" class="tt-portfolio-carousel-item" data-cursor="View<br>Item" target="_blank">
+											<div class="tt-pci-inner">
+												<figure class="tt-pci-image-wrap cover-opacity-2">
+													<img class="tt-pci-image swiper-lazy" src="assets/img/main/emergency_foods.png" data-src="assets/img/main/emergency_foods.png" alt="Image">
+												</figure> <!-- /.tt-pci-image-wrap -->
+
+												<div class="tt-pci-caption-front">
+													<div class="tt-pci-caption">
+														<div class="tt-pci-caption-inner">	
+															<div class="tt-pci-categories">
+																<div class="tt-pci-category">Food Shortage Scenario</div>
+															</div> <!-- /.tt-pci-categories -->
+															<h2 class="tt-pci-title">Even in a Disaster,<br class="hide-from-sm"> You Have to Eat</h2>
+														</div> <!-- /.tt-pci-caption-inner -->
+													</div> <!-- /.tt-pci-caption -->
+												</div> <!-- /.tt-pci-caption-front -->
+
+												<div class="tt-pci-caption tt-pci-caption-back">
+													<div class="tt-pci-caption-inner">
+														<div class="tt-pci-categories">
+															<div class="tt-pci-category">Food Shortage Scenario</div>
+														</div> <!-- /.tt-pci-categories -->
+														<h2 class="tt-pci-title">Even in a Disaster,<br class="hide-from-sm"> You Have to Eat</h2>
+													</div> <!-- /.tt-pci-caption-inner -->
+												</div> <!-- /.tt-pci-caption -->
+
+											</div> <!-- /.tt-pci-inner -->
+										</a>
+										<!-- End portfolio carousel item -->
+
+									</div>
+									<!-- End swiper slide -->
+
+									<!-- Begin swiper slide 
+									======================== -->
+									<div class="swiper-slide">
+										<a href="#" class="tt-portfolio-carousel-item" data-cursor="View<br>Item">
+											<div class="tt-pci-inner">
+												<figure class="tt-pci-image-wrap cover-opacity-2">
+													<img class="tt-pci-image swiper-lazy" src="assets/img/main/emergency_heat.png" data-src="assets/img/main/emergency_heat.png" alt="Image">
+												</figure> <!-- /.tt-pci-image-wrap -->
+
+												<div class="tt-pci-caption-front">
+													<div class="tt-pci-caption">
+														<div class="tt-pci-caption-inner">
+															<div class="tt-pci-categories">
+																<div class="tt-pci-category">Heatwave Scenario</div>
+															</div> <!-- /.tt-pci-categories -->
+															<h2 class="tt-pci-title">To Avoid Passing Out<br class="hide-from-sm">Heatwave Emergency Item</h2>
+														</div> <!-- /.tt-pci-caption-inner -->
+													</div> <!-- /.tt-pci-caption -->
+												</div> <!-- /.tt-pci-caption-front -->
+
+												<div class="tt-pci-caption tt-pci-caption-back">
+													<div class="tt-pci-caption-inner">
+														<div class="tt-pci-categories">
+															<div class="tt-pci-category">Heatwave Scenario</div>
+														</div> <!-- /.tt-pci-categories -->
+														<h2 class="tt-pci-title">To Avoid Passing Out<br class="hide-from-sm">Heatwave Emergency Item</h2>
+													</div> <!-- /.tt-pci-caption-inner -->
+												</div> <!-- /.tt-pci-caption -->
+
+											</div> <!-- /.tt-pci-inner -->
+										</a>
+										<!-- End portfolio carousel item -->
+									</div>
+
+									<!-- End swiper slide -->
+
+									<!-- Begin swiper slide 
+									======================== -->
+									<div class="swiper-slide">
+										<a href="https://www.amazon.com/Membrane-Solutions-Filtration-Emergency-Preparedness/dp/B07T35ZXSM/ref=sr_1_4_sspa?crid=1ULESVFILOOY5&dib=eyJ2IjoiMSJ9.SVz1CT7n7pC8yN1HxZwKTOD6C6RBiCgvvd5LJkivnkDQc8JrJwAhmEkCeGhdi3IgrRH6fTR3xnX26bRvJ0idQ3aa1IBzZPdc3AbPhbYZrbl1yWvUYgPGgtewWHPbURIQNaFxjWtInCP9m5xYH3LFi_vWxUjutwjluPSqLdXnIABWchqkwihFTnt9ggfFfcnhw0h97ISH5m23YXShxVukW3Fvs9IZEtOXIw-f3Xqm6pDYNMKHNQIiDSWTZEBc-k6tAXkJCQt4HXeJARWOsQgR9ODdzitzeq-Z_XkC4dUwQco.0IkWy1nAEMpGSOmb4E1gp8VdWUOEKa27_QZrwI_S6i0&dib_tag=se&keywords=water%2Bfilter%2Bmini&qid=1733098749&sprefix=water%2Bfilter%2Bm%2Caps%2C393&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1" class="tt-portfolio-carousel-item" data-cursor="View<br>Item" target="_blank">
+											<div class="tt-pci-inner">
+												<figure class="tt-pci-image-wrap cover-opacity-2">
+													<img class="tt-pci-image swiper-lazy" src="assets/img/main/emergency_water.png" data-src="assets/img/main/emergency_water.png" alt="Image">
+												</figure> <!-- /.tt-pci-image-wrap -->
+
+												<div class="tt-pci-caption-front">
+													<div class="tt-pci-caption">
+														<div class="tt-pci-caption-inner">
+															<div class="tt-pci-categories">
+																<div class="tt-pci-category">Water Filter</div>
+															</div> <!-- /.tt-pci-categories -->
+															<h2 class="tt-pci-title">Essential Item<br class="hide-from-sm"> for All Disasters</h2>
+														</div> <!-- /.tt-pci-caption-inner -->
+													</div> <!-- /.tt-pci-caption -->
+												</div> <!-- /.tt-pci-caption-front -->
+
+												<div class="tt-pci-caption tt-pci-caption-back">
+													<div class="tt-pci-caption-inner">
+														<div class="tt-pci-categories">
+															<div class="tt-pci-category">Water Filter</div>
+														</div> <!-- /.tt-pci-categories -->
+														<h2 class="tt-pci-title">Essential Item<br class="hide-from-sm"> for All Disasters</h2>
+													</div> <!-- /.tt-pci-caption-inner -->
+												</div> <!-- /.tt-pci-caption -->
+
+											</div> <!-- /.tt-pci-inner -->
+										</a>
+										<!-- End portfolio carousel item -->
+
+									</div>
+									<!-- End swiper slide -->
+
+									<!-- Begin swiper slide 
+									======================== -->
+									<div class="swiper-slide">
+										<a href="https://www.amazon.com/Pieces-Styptic-clotting-Emergency-Medical/dp/B0CLKLNZMK/ref=sr_1_1_sspa?crid=26A8BUXLEH7NC&dib=eyJ2IjoiMSJ9.-7ikJ2ZvnGxUYHIGf1WuQ__KAdgg8PYdTuL76ak3DcSukpZuAgXX5Q2X92BelAidGfjEKjbBS7oXjsakZO8j3dJ61nanjM-7jyHqz8H74UCcD3L6H6k08-5Kc6OD9Mh4yf0mNx98PBoxAG1B7u5yuFA2T1RerwBFEAG23DEGQvfnWdstDNhs_DKhJd68wArIKg88DGIiKDw3XYpPFpNcXbwChtAgbhBr2XvYm0XBNE3-qh7p284rBgwQKbuOCRSJRTMis4ZL4gmfpj_F6Asmej8HLFx-Ok4mU52BuZWxmUk.nL6IXiaQyRUU5hBbsi0oTFvcJBQ6tCh5lXKd0LTrlQ8&dib_tag=se&keywords=pet+emergency+kit&qid=1733098931&sprefix=pet+emergency+kit%2Caps%2C341&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" class="tt-portfolio-carousel-item" data-cursor="View<br>Item" target="_blank">
+											<div class="tt-pci-inner">
+												<figure class="tt-pci-image-wrap cover-opacity-2">
+													<img class="tt-pci-image swiper-lazy" src="assets/img/main/emergency_pets.png" data-src="assets/img/main/emergency_pets.png" alt="Image">
+												</figure> <!-- /.tt-pci-image-wrap -->
+
+												<div class="tt-pci-caption-front">
+													<div class="tt-pci-caption">
+														<div class="tt-pci-caption-inner">
+															<div class="tt-pci-categories">
+																<div class="tt-pci-category">Disaster Scenario</div>
+															</div> <!-- /.tt-pci-categories -->
+															<h2 class="tt-pci-title">Protect Your<br class="hide-from-sm"> Beloved Pets</h2>
+														</div> <!-- /.tt-pci-caption-inner -->
+													</div> <!-- /.tt-pci-caption -->
+												</div> <!-- /.tt-pci-caption-front -->
+
+												<div class="tt-pci-caption tt-pci-caption-back">
+													<div class="tt-pci-caption-inner">
+														<div class="tt-pci-categories">
+															<div class="tt-pci-category">Disaster Scenario</div>
+														</div> <!-- /.tt-pci-categories -->
+														<h2 class="tt-pci-title">Protect Your<br class="hide-from-sm"> Beloved Pets</h2>
+													</div> <!-- /.tt-pci-caption-inner -->
+												</div> <!-- /.tt-pci-caption -->
+
+											</div> <!-- /.tt-pci-inner -->
+										</a>
+										<!-- End portfolio carousel item -->
+
+									</div>
+									<!-- End swiper slide -->
+
+									<!-- Begin swiper slide 
+									======================== -->
+									<div class="swiper-slide">
+										<a href="https://www.amazon.com/Emergency-Survival-Professional-Equipment-Adventure/dp/B09CDCPCF9/ref=sxin_16_pa_sp_search_thematic_sspa?content-id=amzn1.sym.612c900b-0e6c-4595-bac3-784edaaed3c1%3Aamzn1.sym.612c900b-0e6c-4595-bac3-784edaaed3c1&crid=9HECYFSKTJNR&cv_ct_cx=survival+kit+bag&dib=eyJ2IjoiMSJ9.LYag4X5U56ROVBB_NiCl28RbGqPauy3DzoUbodQd2IA9MIiIg1C7NS-jG_ygiIT3hijUOZ93QRu603kMHCDSpw.y9zriGhHftU5kxfMWa2Zk16G1N4cXugjZaD1E9VZomA&dib_tag=se&keywords=survival+kit+bag&pd_rd_i=B09CDCPCF9&pd_rd_r=172a5760-7c5b-4395-a7b2-f9c752b98796&pd_rd_w=k08w9&pd_rd_wg=EUceU&pf_rd_p=612c900b-0e6c-4595-bac3-784edaaed3c1&pf_rd_r=KJ4TCY066E58RX80B4W8&qid=1733099041&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=survival+kit+ban%2Caps%2C407&sr=1-4-9428117c-b940-4daa-97e9-ad363ada7940-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&psc=1" class="tt-portfolio-carousel-item" data-cursor="View<br>Item" target="_blank">
+											<div class="tt-pci-inner">
+												<figure class="tt-pci-image-wrap cover-opacity-2">
+													<img class="tt-pci-image swiper-lazy" src="assets/img/main/emergency_aids.png" data-src="assets/img/main/emergency_aids.png" alt="Image">
+												</figure> <!-- /.tt-pci-image-wrap -->
+
+												<div class="tt-pci-caption-front">
+													<div class="tt-pci-caption">
+														<div class="tt-pci-caption-inner">
+															<div class="tt-pci-categories">
+																<div class="tt-pci-category">Disaster Scenario</div>
+															</div> <!-- /.tt-pci-categories -->
+															<h2 class="tt-pci-title">All-in-One<br class="hide-from-sm"> for Convenience</h2>
+														</div> <!-- /.tt-pci-caption-inner -->
+													</div> <!-- /.tt-pci-caption -->
+												</div> <!-- /.tt-pci-caption-front -->
+
+												<div class="tt-pci-caption tt-pci-caption-back">
+													<div class="tt-pci-caption-inner">
+														<div class="tt-pci-categories">
+															<div class="tt-pci-category">Disaster Scenario</div>
+														</div> <!-- /.tt-pci-categories -->
+														<h2 class="tt-pci-title">All-in-One<br class="hide-from-sm"> for Convenience</h2>
+													</div> <!-- /.tt-pci-caption-inner -->
+												</div> <!-- /.tt-pci-caption -->
+
+											</div> <!-- /.tt-pci-inner -->
+										</a>
+										<!-- End portfolio carousel item -->
+
+									</div>
+									<!-- End swiper slide -->
+
+									<!-- Begin swiper slide 
+									======================== -->
+									<div class="swiper-slide">
+										<a href="https://youtu.be/pDQR7DM4uMM?si=G1ZUfFzn4STK_1G9" class="tt-portfolio-carousel-item" data-cursor="View<br>Item">
+											<div class="tt-pci-inner">
+												<figure class="tt-pci-image-wrap cover-opacity-2">
+													<video class="tt-pci-video" loop muted preload="metadata" poster="assets/img/main/bbcnews.png">
+														<source src="assets/vids/bbc_bag.mp4" type="video/mp4">
+													</video>
+												</figure> <!-- /.tt-pci-image-wrap -->
+
+												<div class="tt-pci-caption-front">
+													<div class="tt-pci-caption">
+														<div class="tt-pci-caption-inner">
+															<div class="tt-pci-categories">
+																<div class="tt-pci-category">Basic Survival Bag Preparation</div>
+															</div> <!-- /.tt-pci-categories -->
+															<h2 class="tt-pci-title">Prepare Like This<br class="hide-from-sm"> to Survive</h2>
+														</div> <!-- /.tt-pci-caption-inner -->
+													</div> <!-- /.tt-pci-caption -->
+												</div> <!-- /.tt-pci-caption-front -->
+
+												<div class="tt-pci-caption tt-pci-caption-back">
+													<div class="tt-pci-caption-inner">
+														<div class="tt-pci-categories">
+															<div class="tt-pci-category">Survival Bag Preparation</div>
+														</div> <!-- /.tt-pci-categories -->
+														<h2 class="tt-pci-title">Prepare Like This<br class="hide-from-sm"> to Survive</h2>
+													</div> <!-- /.tt-pci-caption-inner -->
+												</div> <!-- /.tt-pci-caption -->
+
+											</div> <!-- /.tt-pci-inner -->
+										</a>
+										<!-- End portfolio carousel item -->
+									</div> 
+									<!-- End swiper slide -->
+
+								</div>
+								<!-- End swiper wrapper -->
+							</div>
+							<!-- End swiper container -->
+
+							<!-- Begin portfolio carousel navigation 
+							========================================= -->
+							<div class="tt-pc-navigation tt-swiper-nav">
+								<div class="tt-pc-nav-prev">
+									<div class="tt-pc-arrow tt-pc-arrow-prev magnetic-item"><i class="tt-arrow-left"></i></div>
+								</div>
+								<div class="tt-pc-nav-next">
+									<div class="tt-pc-arrow tt-pc-arrow-next magnetic-item"><i class="tt-arrow-right"></i></div>
+								</div>
+								<div class="tt-pc-pagination"></div>
+							</div>
+							<!-- End portfolio carousel navigation -->
+
+						</div>
+						<!-- End portfolio carousel -->
+					</div>
+					<!-- End page content -->
+				</div>
+				<!-- End content wrap -->
+
+
+			</div>
+			<!-- End scroll container -->
+
+
+		</main>
+		<!-- End body inner -->
+
+
+        
+
+		<!-- ====================
+		///// Scripts below /////
+		===================== -->
+
+		<!-- Core JS -->
+		<script src="assets/vendor/jquery/jquery.min.js"></script> <!-- jquery JS (https://jquery.com) -->
+
+		<!-- Libs and Plugins JS -->
+		<script src="assets/vendor/gsap/gsap.min.js"></script> <!-- GSAP JS (https://greensock.com/gsap/) -->
+		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> <!-- GSAP ScrollToPlugin JS (https://greensock.com/scrolltoplugin/) -->
+		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> <!-- GSAP ScrollTrigger JS (https://greensock.com/scrolltrigger/) -->
+
+		<script src="assets/vendor/smooth-scrollbar.js"></script> <!-- Smooth Scrollbar JS (https://github.com/idiotWu/smooth-scrollbar/) -->
+		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> <!-- Swiper JS (https://swiperjs.com/) -->
+		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> <!-- imagesloaded JS (more info: https://imagesloaded.desandro.com/) -->
+		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
+		<script src="assets/vendor/isotope/packery-mode.pkgd.min.js"></script> <!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
+		<script src="assets/vendor/lightgallery/js/lightgallery-all.min.js"></script> <!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
+		<script src="assets/vendor/jquery.mousewheel.min.js"></script> <!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
+
+		<!-- Template master JS -->
+		<script src="assets/js/theme.js"></script>
+
+
+
+	</body>
+
+</html>
